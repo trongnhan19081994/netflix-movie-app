@@ -24,3 +24,6 @@ Git:
 
     Kiểm tra đang ở branch nào: git branch
     Xoá branch: git branch -D update-readme (update-readme là tên branch)
+
+
+Link: https://youtu.be/tsNswx0nRKM?t=2533
