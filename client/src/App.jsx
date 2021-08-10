@@ -3,14 +3,36 @@ import Home from './pages/home/Home'
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Watch from './pages/watch/Watch';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 function App() {
+  const user = true
   return (
     <div className="App">
-    <Home />
-      <Register />
-      <Login />
-      <Watch />
+      <Switch>
+          <Route path="/" exact>
+           {user ? <Home /> : <Redirect to="register" />} 
+          </Route>
+          <Route path="/login">
+            {!user ? <Login /> : <Redirect to="/" />} 
+          </Route>
+          <Route path="/register">
+            {!user ? <Register /> : <Redirect to="/" />} 
+          </Route>
+          {user && (
+            <>
+              <Route path="/movies">
+                <Home type="movies"/>
+              </Route>
+              <Route path="/series">
+                <Home type="series"/>
+              </Route>
+              <Route path="/watch">
+                <Watch />
+              </Route>
+            </>
+          )}
+      </Switch>
     </div>
   );
 }
