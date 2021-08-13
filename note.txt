@@ -25,5 +25,10 @@ Git:
     Kiểm tra đang ở branch nào: git branch
     Xoá branch: git branch -D update-readme (update-readme là tên branch)
 
+Để clone 1 branch nào đó trong git: 
+git clone --single-branch -b tên-branch link-git
+git clone --single-branch -b tên-branch link-git . ( để clone code thẳng vô thư mục đang cd)
+Ví dụ: git clone --single-branch -b react-admin https://github.com/safak/youtube.git
 
-Link: https://youtu.be/tsNswx0nRKM?t=2533
+
+Link: https://youtu.be/tsNswx0nRKM?t=8238
